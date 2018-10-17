@@ -1,0 +1,86 @@
+
+
+.beeriodic-grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template: repeat(4, 125px)/ repeat(9, 125px);
+  grid-gap: 1px;
+}
+
+.title{
+  grid-column-start: 2;
+  grid-column-end: 7;
+  font-size: 6rem;
+  font-weight: bold;
+}
+.key{
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+
+svg {
+  width: 70%;
+}
+.subtitle{
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.beeriodic-cell {
+
+  background-color: lightgray;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-columns{
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tap-number, .abv {
+  width: 35px;
+}
+
+.tap-number {
+  text-align: left;
+}
+
+.abv {
+  text-align: right;
+  font-size: .8rem;
+}
+
+.beer-name, .beer-brand {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+}
+
+.beer-brand {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.abbreviation {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.wee {
+  font-size: 0.5rem;
+  vertical-align: super;
+}
+
+* {
+  text-align: center;
+  font-family: helvetica;
+  box-sizing: border-box;
+}
