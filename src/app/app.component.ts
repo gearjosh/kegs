@@ -11,4 +11,8 @@ import { Keg } from './models/keg.model'
 export class AppComponent {
   title = 'kegs';
 
+  addKeg(newKeg: Keg) {
+    KEGS.push(newKeg);
+  }
+
 }
