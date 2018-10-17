@@ -1,0 +1,20 @@
+
+<button *ngIf="!editField" type="button" name="button" (click)="editFieldFunction(true)">Edit Keg</button>
+
+<div class="" *ngIf="editField">
+
+  <label>Tap Number: <input #tapNumber type="text"></label><br>
+  <button (click)="loadEditFunction(true)" type="button" name="button">Load Keg</button>
+
+  <br>
+  <br>
+  <div *ngIf="loadEdit">
+    <label>Edit Beer Name: <input [(ngModel)]="kegs[tapNumber.value - 1].beer" type="text"></label><br>
+    <label>Edit Beer Brand:<input [(ngModel)]="kegs[tapNumber.value - 1].brand" type="text"></label><br>
+    <label>Edit Alcohol by Volume: <input [(ngModel)]="kegs[tapNumber.value - 1].ABV" type="number"></label><br>
+    <label>Edit Pint Price: <input [(ngModel)]="kegs[tapNumber.value - 1].price" type="number"></label><br>
+  </div>
+
+  <button (click)="editFieldFunction(false)" type="button" name="button">Done Editing</button>
+
+</div>

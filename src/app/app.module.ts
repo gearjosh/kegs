@@ -4,16 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DisplayKegsComponent } from './display-kegs/display-kegs.component';
 import { AddKegComponent } from './add-keg/add-keg.component';
+import { EditKegComponent } from './edit-keg/edit-keg.component';
+import { FormsModule }  from '@angular/forms';
+import { CheckKegComponent } from './check-keg/check-keg.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayKegsComponent,
-    AddKegComponent
+    AddKegComponent,
+    EditKegComponent,
+    CheckKegComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

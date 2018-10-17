@@ -6,11 +6,15 @@ import { Keg } from '../models/keg.model';
   styleUrls: ['./add-keg.component.css']
 })
 export class AddKegComponent implements OnInit {
+  addField: boolean = false;
 
   @Output() sendKeg = new EventEmitter();
 
   constructor() { }
 
+  addFieldFunction(bool:boolean){
+    this.addField = bool;
+  }
   submitForm(beerName, beerBrand, abv, price) {
     let newKeg: Keg = new Keg(beerName, abv, price, beerBrand);
     this.sendKeg.emit(newKeg);

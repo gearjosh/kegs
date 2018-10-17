@@ -5,7 +5,7 @@ export const KEGS: Keg[] = [
   new Keg('Tesla Coffee Stout', 7, 3.50),
   new Keg('Edison Amber', 10.5, 3.50),
   new Keg('Bright Cider', 4.5, 5.50, '2 Towns'),
-  new Keg('van Braun Oatmeal Brown', 6, 3.50),
+  new Keg('von Braun Oatmeal Brown', 6, 3.50),
   new Keg('Old Chub Scottish', 5.5, 5.50, 'Oskar Blues'),
   new Keg('Fahrenheit Belgian Red', 10.5, 3.50),
   new Keg('The WOZ', 5.5, 3.50),
