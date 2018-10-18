@@ -1,12 +1,14 @@
+<div class="add-area">
 
-<button *ngIf="!addField" type="button" name="button" (click)="addFieldFunction(true)">Add Keg</button>
+  <button *ngIf="!addField" type="button" name="button" (click)="addFieldFunction(true)">Add Keg</button>
 
-<form class="" *ngIf="addField">
-  <label>Enter Beer Name: <input #beerName type="text"></label><br>
-  <label>Enter Beer Brand:<input #beerBrand type="text"></label><br>
-  <label>Enter Alcohol by Volume: <input #abv type="number"></label><br>
-  <label>Enter Pint Price: <input #price type="number"></label><br>
-  <button (click)="submitForm(beerName.value, beerBrand.value, abv.value, price.value); beerName.value=''; beerBrand.value=''; abv.value=''; price.value=''; addFieldFunction(false)" type="button">Click to add keg</button>
-  <br>
-  <button (click)="addFieldFunction(false)" type="button" name="button">Cancel Add Keg</button>
-</form>
+  <form class="" *ngIf="addField">
+    <label>Enter Beer Name:<br><input #beerName type="text"></label><br>
+    <label>Enter Beer Brand:<br><input #beerBrand type="text"></label><br>
+    <label>Enter Alcohol by Volume:<br><input #abv type="number"></label><br>
+    <label>Enter Pint Price:<br><input #price type="number"></label><br><br>
+    <button (click)="submitForm(beerName.value, beerBrand.value, abv.value, price.value); beerName.value=''; beerBrand.value=''; abv.value=''; price.value=''; addFieldFunction(false)" type="button">Add Keg</button>
+    <button (click)="addFieldFunction(false)" type="button" name="button">Cancel</button>
+  </form>
+
+</div>

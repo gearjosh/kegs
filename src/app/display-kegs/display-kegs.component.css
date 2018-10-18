@@ -3,7 +3,7 @@
 .beeriodic-grid {
   display: grid;
   grid-auto-flow: dense;
-  grid-template: repeat(4, 125px)/ repeat(9, 125px);
+  grid-template: repeat(auto-fill, 125px)/ repeat(9, 125px);
   grid-gap: 1px;
 }
 
@@ -30,13 +30,36 @@ svg {
   font-weight: bold;
 }
 
-.beeriodic-cell {
+.cell-wrapper {
+  position: relative;
+}
 
-  background-color: lightgray;
+.beeriodic-cell {
+  height: 125px;
+  width: 125px;
   display:flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
+.cell-fill {
+  background-color: #F2BD3D;
+  width: 100%;
+
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.cell-bg {
+  background-color: #FFF9DF;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+}
+
 
 .top-columns{
   padding: 4px;
@@ -77,6 +100,16 @@ svg {
 .wee {
   font-size: 0.5rem;
   vertical-align: super;
+}
+
+.prices {
+  background-color: #4a4a4a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 125px;
 }
 
 * {

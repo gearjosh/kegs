@@ -10,6 +10,7 @@ import { Keg } from '../models/keg.model'
 export class DisplayKegsComponent implements OnInit {
 
   kegs = KEGS;
+  crimson = "red";
 
   constructor() { }
 
